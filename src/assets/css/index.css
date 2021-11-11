@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "helvetica";
+  src: url("../fonts/helvetica.ttf");
+}
+
+@font-face {
+  font-family: "segoeui";
+  src: url("../fonts/segoeui.ttf");
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-break: anywhere;
+  background-color: #F2F2F2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "segoeui", serif;
+}
+
+a, p, span {
+  font-family: "helvetica", serif;
+  color: #262626;
+  font-weight: 300;
+}
+
+.landingPicture {
+  width: 100%;
+}
+
+.mainBlock {
+  max-width: 600px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
+}
+
+.blockTexts {
+  padding: 0 10px 10px;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.tap {
+  cursor: pointer;
+}
+
+.linkImage {
+  width: 50px;
+}
+
+.linkWithImage {
+  padding: 5px;
+}
+
+.promokodInput {
+  text-align: center;
+  font-size: 18px;
+  border: lightgray 1px solid;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.copyButton {
+  border-radius: 5px;
+  background: #C43485;
+  border: #C43485 1px solid;
+  padding: 5px 10px;
+}
+
+.inputZone {
+  display: inline-flex;
+}
+
+.instagramLink {
+  padding: 20px 0 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.instagramLinkButtonImage {
+  width: 24px;
+  padding-right: 15px;
+}
+
+.instagramLinkButton {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 5px;
+  background: #C43485;
+  border: #C43485 1px solid;
+  padding: 15px;
+  color: #fff;
+}
