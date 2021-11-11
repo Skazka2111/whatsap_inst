@@ -39,6 +39,18 @@ function App() {
                             <a href={`https://t.me/Infoproducer_Bot?ref=${utm_medium}`} target="_blank" className="linkWithImage" rel="noreferrer">
                                 <img className="linkImage" src={telegram} alt="Telegram" />
                             </a>
+                            <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
+                                <img className="linkImage" src={facebook} alt="Telegram" />
+                            </a>
+                            <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
+                                <img className="linkImage" src={ok} alt="Telegram" />
+                            </a>
+                            <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
+                                <img className="linkImage" src={viber} alt="Telegram" />
+                            </a>
+                            <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
+                                <img className="linkImage" src={whatsapp} alt="Telegram" />
+                            </a>
                             <span
                                 className={"linkWithImage tap"}
                                 onClick={() => setCurrentPage(1)}
