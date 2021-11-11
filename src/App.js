@@ -1,10 +1,16 @@
 import { useState, Fragment } from "react";
+import landing from "./assets/img/landing.jpg";
+import copy from "./assets/img/copy.png";
+
+// Импорты всех картинок
 import vk from "./assets/img/vk.png";
 import telegram from "./assets/img/telegram.png";
 import instagram from "./assets/img/instagram.png";
 import instagramWhite from "./assets/img/instagram_white.png";
-import landing from "./assets/img/landing.jpg";
-import copy from "./assets/img/copy.png";
+import facebook from "./assets/img/facebook.png";
+import ok from "./assets/img/ok.png";
+import viber from "./assets/img/viber.png";
+import whatsapp from "./assets/img/whatsapp.png";
 
 function App() {
     const [currentPage, setCurrentPage] = useState(0);
