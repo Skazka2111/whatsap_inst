@@ -40,16 +40,16 @@ function App() {
                                 <img className="linkImage" src={telegram} alt="Telegram" />
                             </a>
                             <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
-                                <img className="linkImage" src={facebook} alt="Telegram" />
+                                <img className="linkImage" src={facebook} alt="Facebook" />
                             </a>
                             <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
-                                <img className="linkImage" src={ok} alt="Telegram" />
+                                <img className="linkImage" src={ok} alt="Odnoklassniki" />
                             </a>
                             <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
-                                <img className="linkImage" src={viber} alt="Telegram" />
+                                <img className="linkImage" src={viber} alt="Viber" />
                             </a>
                             <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
-                                <img className="linkImage" src={whatsapp} alt="Telegram" />
+                                <img className="linkImage" src={whatsapp} alt="WhatsApp" />
                             </a>
                             <span
                                 className={"linkWithImage tap"}
