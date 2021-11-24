@@ -25,7 +25,7 @@ function App() {
     return (
         <div className="application">
             <div className="mainBlock">
-                {currentPage === 0 ? (
+                {currentPage === 0 && (
                     <Fragment>
                         <img src={landing} alt="landing" className="landingPicture" />
                         <div className="blockTexts">
@@ -48,9 +48,12 @@ function App() {
                             <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
                                 <img className="linkImage" src={viber} alt="Viber" />
                             </a>
-                            <a href="#" target="_blank" className="linkWithImage" rel="noreferrer">
-                                <img className="linkImage" src={whatsapp} alt="WhatsApp" />
-                            </a>
+                            <span
+                                className={"linkWithImage tap"}
+                                onClick={() => setCurrentPage(2)}
+                            >
+                <img className="linkImage" src={whatsapp} alt="Whatsapp" />
+              </span>
                             <span
                                 className={"linkWithImage tap"}
                                 onClick={() => setCurrentPage(1)}
@@ -59,56 +62,105 @@ function App() {
               </span>
                         </div>
                     </Fragment>
-                ) : (
-                    <Fragment>
-                        <img src={landing} alt="landing" className="landingPicture" />
-                        <div className="blockTexts">
-                            <h2 className="title">Instagram</h2>
-                            <p>
-                                Нажмите на кнопку ниже и у Вас автоматически скопируется Ваш код
-                                в буфер обмена, затем переходите в профиль Instagram, открывайте
-                                директ и отправляйте скопированный текст.
-                            </p>
-                            <div className="inputZone">
-                                <input
-                                    className="promokodInput"
-                                    readOnly={true}
-                                    value={copied ? "Скопировано!" : "Мой промокод " + promokod}
-                                />
-                                <button
-                                    className="copyButton tap"
-                                    onClick={() => {
-                                        navigator.clipboard.writeText("Мой промокод " + promokod).then(() => {
-                                            setCopied(true);
-                                            setTimeout(() => {
-                                                setCopied(false);
-                                            }, 1000);
-                                        })
-                                    }}
-                                >
-                                    <img src={copy} alt={"copy icon"} />
-                                </button>
-                            </div>
-                            <div className="instagramLink">
-                                <a
-                                    href={"https://instagram.com/zelenminions"}
-                                    target={"_blank"}
-                                    className="instagramLinkButton" rel="noreferrer"
-                                >
-                                    <img
-                                        className="instagramLinkButtonImage"
-                                        src={instagramWhite}
-                                        alt="Instagram"
-                                    />{" "}
-                                    Перейти в профиль
-                                </a>
-                            </div>
-                            <span className="tap" onClick={() => setCurrentPage(0)}>
+                )}
+                {currentPage === 1 &&
+                <Fragment>
+                    <img src={landing} alt="landing" className="landingPicture"/>
+                    <div className="blockTexts">
+                        <h2 className="title">Instagram</h2>
+                        <p>
+                            Нажмите на кнопку ниже и у Вас автоматически скопируется Ваш код
+                            в буфер обмена, затем переходите в профиль Instagram, открывайте
+                            директ и отправляйте скопированный текст.
+                        </p>
+                        <div className="inputZone">
+                            <input
+                                className="promokodInput"
+                                readOnly={true}
+                                value={copied ? "Скопировано!" : "Мой промокод " + promokod}
+                            />
+                            <button
+                                className="copyButton tap"
+                                onClick={() => {
+                                    navigator.clipboard.writeText("Мой промокод " + promokod).then(() => {
+                                        setCopied(true);
+                                        setTimeout(() => {
+                                            setCopied(false);
+                                        }, 1000);
+                                    })
+                                }}
+                            >
+                                <img src={copy} alt={"copy icon"}/>
+                            </button>
+                        </div>
+                        <div className="instagramLink">
+                            <a
+                                href={"https://instagram.com/zelenminions"}
+                                target={"_blank"}
+                                className="instagramLinkButton" rel="noreferrer"
+                            >
+                                <img
+                                    className="instagramLinkButtonImage"
+                                    src={instagramWhite}
+                                    alt="Instagram"
+                                />{" "}
+                                Перейти в профиль
+                            </a>
+                        </div>
+                        <span className="tap" onClick={() => setCurrentPage(0)}>
                 Вернуться назад
               </span>
+                    </div>
+                </Fragment>
+                }
+                {currentPage === 2 &&
+                <Fragment>
+                    <img src={landing} alt="landing" className="landingPicture" />
+                    <div className="blockTexts">
+                        <h2 className="title">Whatsapp</h2>
+                        <p>
+                            Описание для ватсапа
+                        </p>
+                        <div className="inputZone">
+                            <input
+                                className="promokodInput"
+                                readOnly={true}
+                                value={copied ? "Скопировано!" : "Мой промокод " + promokod}
+                            />
+                            <button
+                                className="copyButton whatsAppColor whatsAppBorder tap"
+                                onClick={() => {
+                                    navigator.clipboard.writeText("Мой промокод " + promokod).then(() => {
+                                        setCopied(true);
+                                        setTimeout(() => {
+                                            setCopied(false);
+                                        }, 1000);
+                                    })
+                                }}
+                            >
+                                <img src={copy} alt={"copy icon"} />
+                            </button>
                         </div>
-                    </Fragment>
-                )}
+                        <div className="instagramLink">
+                            <a
+                                href={"https://whatsapp.com/zelenminions"}
+                                target={"_blank"}
+                                className="instagramLinkButton whatsAppColor whatsAppBorder" rel="noreferrer"
+                            >
+                                <img
+                                    className="instagramLinkButtonImage"
+                                    src={whatsapp}
+                                    alt="Instagram"
+                                />{" "}
+                                Написать
+                            </a>
+                        </div>
+                        <span className="tap" onClick={() => setCurrentPage(0)}>
+                Вернуться назад
+              </span>
+                    </div>
+                </Fragment>
+                    }
             </div>
         </div>
     );
